@@ -10,4 +10,9 @@ class Good extends Model
     use HasFactory;
 
     protected $fillable = ['id'];
+
+
+    public function prices(){
+        return $this->hasMany(PriceTag::class);
+    }
 }
